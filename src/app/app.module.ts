@@ -5,16 +5,18 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+import { CompanyService } from './shared/model/company.service';
+
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        HttpModule
+    ],
+    providers: [CompanyService],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
