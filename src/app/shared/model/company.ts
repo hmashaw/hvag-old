@@ -9,7 +9,7 @@ export class Company implements Entity{
     constructor(
         public name: string,
         public about: string
-    ) {console.log('Company constructor called')}
+    ) {}
 
 
     // Data is initially held in a JSON object.  Instantiate to Company class
@@ -17,11 +17,10 @@ export class Company implements Entity{
         name,
         about,
         ): Company {
-            console.log('fromJSON called')
-            return new Company(
-                name,
-                about
-            )
+                return new Company(
+                    name,
+                    about
+                )
         }
     
 }

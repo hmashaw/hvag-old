@@ -17,35 +17,21 @@ export class AppComponent {
 
     title: string = 'HVAG Works!';
 
-    _company: any;
+    company$: any;
     company: Company;
     
     constructor(private companyService: CompanyService) {}
 
 
     ngOnInit() {
-        this.companyService.getCompanyInfo
-            .subscribe(
-                company => this._company = company
-            );
-
-        this.company = Company.fromJSON(this._company.name,
-                                        this._company.about);
-
-        console.log(this._company.name);
-        console.log(this._company.about)
-        console.log("_company -> " + this._company);
-        console.log(this._company)
+        this.company$ = this.companyService.observeCompany
+        this.company = this.companyService.getCompany();
     }
 
 
     onClick() {
-        alert('Click Action')
-        
-        console.log("company -> " + this.company)
         console.log(this.company)
-        console.log(this.company.name)
-        console.log(this.company.about)
+        console.log('Looks Good!')
     }
 
 }

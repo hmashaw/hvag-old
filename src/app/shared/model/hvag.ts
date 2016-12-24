@@ -1,5 +1,5 @@
 /**
- * Object containing elemnts for a given company
+ * Object containing elements for a given company
  * HVAG elements
  */
 

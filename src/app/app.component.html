@@ -1,6 +1,6 @@
 <h1>{{title}}</h1>
 
-<h2>{{company.name}}</h2>
+<h2>{{ (company$ | async)?.name }}</h2>
 
 
 <div>

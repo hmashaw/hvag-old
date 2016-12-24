@@ -20,15 +20,24 @@ const avatarEntity = new BehaviorSubject<any>(HVAG);
 export class CompanyService {
 
     company = avatarEntity;
-    getCompanyInfo = avatarEntity.asObservable()
+    observeCompany = avatarEntity.asObservable()
 
 
-    getEntity() {
-        return this.company.value
+    /**
+     * @returns {Company}
+     */
+    getCompany(): Company {
+        let _company = this.company.value;
+
+        return Company.fromJSON(_company.name,
+                                _company.about);
     }
+    
 
-
-    setEntity(entity: Entity) {
+    /**
+     * @param {Entity} entity Entity object with updates
+     */
+    setCompany(entity: Entity) {
         this.company.next(entity);
     }
     
