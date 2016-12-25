@@ -13,7 +13,7 @@ import { Company } from './company';
 import { HVAG } from './hvag';
 
 
-// Create a BehaviorSubject avatar to represent the company.  It will be an Observable
+// Create a BehaviorSubject "avatar"" to represent the company.  It will be an Observable
 const avatarEntity = new BehaviorSubject<any>(HVAG); 
 
 @Injectable()
@@ -32,7 +32,7 @@ export class CompanyService {
         return Company.fromJSON(_company.name,
                                 _company.about);
     }
-    
+
 
     /**
      * @param {Entity} entity Entity object with updates
