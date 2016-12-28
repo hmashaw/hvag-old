@@ -1,21 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-
-import { CompanyService } from '../../../shared/model/company.service';
-import { Company } from '../../../shared/model/company';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'hvag-top',
-  templateUrl: './top.component.html',
-  styleUrls: ['./top.component.css']
+    selector: 'hvag-top',
+    templateUrl: './top.component.html',
+    styleUrls: ['./top.component.css']
 })
+
 export class TopComponent implements OnInit {
 
-  company$: any;
+    @Input()
+    company: any;
 
-  constructor(private companyService: CompanyService) { }
+    constructor() {}
 
-  ngOnInit() {
-      this.company$ = this.companyService.observeCompany
-  }
+    ngOnInit() {}
 
 }

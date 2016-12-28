@@ -1,21 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-
-import { CompanyService } from '../../../shared/model/company.service';
-import { Company } from '../../../shared/model/company';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'hvag-happening',
-  templateUrl: './happening.component.html',
-  styleUrls: ['./happening.component.css']
+    selector: 'hvag-happening',
+    templateUrl: './happening.component.html',
+    styleUrls: ['./happening.component.css']
 })
+
 export class HappeningComponent implements OnInit {
 
-  company$: any;
+  @Input()
+  company: any;
 
-  constructor(private companyService: CompanyService) { }
+  constructor() {}
 
-  ngOnInit() {
-    this.company$ = this.companyService.observeCompany
-  }
+  ngOnInit() {}
 
 }

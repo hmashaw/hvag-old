@@ -1,21 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 
 import { CompanyService } from '../../shared/model/company.service';
+import { CompanyServiceFB } from '../../shared/model/company-fb.service';
+
 import { Company } from '../../shared/model/company';
 
+
 @Component({
-  selector: 'hvag-main',
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.css']
-})
+    selector: 'hvag-main',
+    templateUrl: './main.component.html',
+    styleUrls: ['./main.component.css']
+  })
+
+
 export class MainComponent implements OnInit {
 
-  company$: any;
+    company$: any;
 
-  constructor(private companyService: CompanyService) { }
+    constructor(private companyServiceFB: CompanyServiceFB) { }
 
-  ngOnInit() {
-      this.company$ = this.companyService.observeCompany
-  }
+    ngOnInit() {
+        this.company$ = this.companyServiceFB.observeCompany()
+    }
 
 }

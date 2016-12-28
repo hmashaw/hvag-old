@@ -3,7 +3,8 @@
  * HVAG elements
  */
 
-export const HVAG = {
+export const THIS_COMPANY = {
+    key: 'default_key',
     name: 'Hudson Valley Advisory Group',
     main_info: `We are an advisory group dedicated to helping small and medium businesses in the Hudson Valley achieve more.
                 Sharing our professional experiences and hardened methodologies in order to create value for business leaders.

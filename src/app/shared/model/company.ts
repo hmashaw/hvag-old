@@ -7,6 +7,7 @@ import { Entity } from './common.d';
 export class Company implements Entity{
 
     constructor(
+        public $key: string,
         public name: string,
         public main_info: string,
         public card1_title: string,
@@ -20,6 +21,7 @@ export class Company implements Entity{
 
     // Data is initially held in a JSON object.  Instantiate to Company class
     static fromJSON(
+        $key,
         name,
         main_info,
         card1_title,
@@ -30,6 +32,7 @@ export class Company implements Entity{
         card3_text
         ): Company {
                 return new Company(
+                    $key,
                     name,
                     main_info,
                     card1_title,

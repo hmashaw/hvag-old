@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-import { CompanyService } from '../../../shared/model/company.service';
+import { CompanyServiceFB } from '../../../shared/model/company-fb.service';
+
 import { Company } from '../../../shared/model/company';
+
 
 @Component({
     selector: 'hvag-header',
@@ -13,10 +15,10 @@ export class HeaderComponent implements OnInit {
 
     company$: any;
 
-    constructor(private companyService: CompanyService) { }
+    constructor(private companyService: CompanyServiceFB) { }
 
     ngOnInit() {
-        this.company$ = this.companyService.observeCompany
+        this.company$ = this.companyService.observeCompany();
     }
 
 }

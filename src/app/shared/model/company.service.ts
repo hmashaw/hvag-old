@@ -10,11 +10,11 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 import { Entity } from './common.d';
 import { Company } from './company';
-import { HVAG } from './hvag';
+import { THIS_COMPANY } from './hvag';
 
 
 // Create a BehaviorSubject "avatar"" to represent the company.  It will be an Observable
-const avatarEntity = new BehaviorSubject<any>(HVAG); 
+const avatarEntity = new BehaviorSubject<any>(THIS_COMPANY); 
 
 @Injectable()
 export class CompanyService {
@@ -29,7 +29,8 @@ export class CompanyService {
     getCompany(): Company {
         let _company = this.company.value;
 
-        return Company.fromJSON(_company.name,
+        return Company.fromJSON(_company.$key,
+                                _company.name,
                                 _company.main_info,
                                 _company.card1_title,
                                 _company.card1_text,
