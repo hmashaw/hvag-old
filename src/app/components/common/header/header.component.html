@@ -1,7 +1,7 @@
 <header>
 
     <!--Navbar-->
-    <nav class="navbar navbar-dark bg-primary">
+    <nav class="navbar navbar-fixed-top navbar-dark special-color">
 
         <!-- Collapse button-->
         <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapseEx2">
@@ -13,19 +13,19 @@
             <!--Collapse content-->
             <div class="collapse navbar-toggleable-xs" id="collapseEx2">
                 <!--Navbar Brand-->
-                <a class="navbar-brand" href="#">{{ (company$ | async)?.name }}</a>
+                <a class="navbar-brand" routerLink="home">{{ (company$ | async)?.name }}</a>
                 <!--Links-->
                 <ul class="nav navbar-nav float-xs-right">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="home">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="about">About</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" routerLinkActive="active">
                         <a class="nav-link" href="#">Join</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" routerLinkActive="active">
                         <a class="nav-link" href="#">Sign In</a>
                     </li>
                 </ul>
@@ -46,4 +46,3 @@
     <!--/.Navbar-->
 
 </header>
-

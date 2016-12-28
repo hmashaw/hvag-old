@@ -30,7 +30,13 @@ export class CompanyService {
         let _company = this.company.value;
 
         return Company.fromJSON(_company.name,
-                                _company.about);
+                                _company.main_info,
+                                _company.card1_title,
+                                _company.card1_text,
+                                _company.card2_title,
+                                _company.card2_text,
+                                _company.card3_title,
+                                _company.card3_text);
     }
 
 

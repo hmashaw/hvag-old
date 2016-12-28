@@ -1,0 +1,21 @@
+.caption {
+    height: 500px;
+    background-size: cover;
+    background-image: url("http://mdbootstrap.com/img/Photos/Slides/img%20(4).jpg");
+}
+
+ul {
+    color: white;
+}
+
+.community {
+    background-color: #f0f0f0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+hr {
+    background-color: #bbb;
+    border: none;
+    height: 2px;
+}

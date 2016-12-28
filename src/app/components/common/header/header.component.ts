@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { CompanyService } from '../shared/model/company.service';
-import { Company } from '../shared/model/company';
+import { CompanyService } from '../../../shared/model/company.service';
+import { Company } from '../../../shared/model/company';
 
 @Component({
     selector: 'hvag-header',
