@@ -16,7 +16,7 @@ export class CompanyServiceFB {
     constructor(private af: AngularFire) { }
 
     observeCompany(): Observable<any> {
-        return this.af.database.object('website/-K_5ir5IPPljrPzaMS8o')
+        return this.af.database.object('website/-K_KhPmo07AfWlXsu-U3')
     }
 
 }

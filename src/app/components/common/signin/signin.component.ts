@@ -38,10 +38,8 @@ export class SigninComponent implements OnInit {
         this.authService.login(formValue.email, formValue.password)
             .subscribe(
                 () => this.router.navigate(['/member']),
-                alert
+                err => alert(err)
             )
-
-        console.log(formValue)
     }
 
 }

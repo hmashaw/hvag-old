@@ -22,11 +22,15 @@ export class HeaderComponent implements OnInit {
     constructor(private companyService: CompanyServiceFB,
                 private authService: AuthService) {}
 
+
     ngOnInit() {
         this.company$ = this.companyService.observeCompany();
         this.authService.authInfo$.subscribe(authInfo => this.authInfo$ = authInfo);
+    }
 
-        console.log(this)
+
+    signout() {
+        this.authService.logout()
     }
 
 }

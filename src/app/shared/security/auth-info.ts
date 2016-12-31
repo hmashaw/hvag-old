@@ -7,7 +7,7 @@ export class AuthInfo {
 
     constructor(public $uid: string) {}
 
-    isLoggedIn() {
+    isLoggedIn():boolean {
         return !!this.$uid;
     }
 

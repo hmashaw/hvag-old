@@ -27,6 +27,7 @@ import { MemberComponent } from './components/member/member.component';
 
 import { firebaseConfig, authConfig } from "../environments/firebase.config";
 import { routerConfig } from './router.config';
+import { AuthGuard } from './shared/security/auth.guard';
 
 import 'rxjs/add/operator/do';
 
@@ -53,7 +54,7 @@ import 'rxjs/add/operator/do';
         AngularFireModule.initializeApp(firebaseConfig, authConfig),
         RouterModule.forRoot(routerConfig)
     ],
-    providers: [CompanyService, CompanyServiceFB, AuthService],
+    providers: [CompanyService, CompanyServiceFB, AuthService, AuthGuard],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

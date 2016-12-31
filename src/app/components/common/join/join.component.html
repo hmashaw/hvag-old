@@ -1,3 +1,77 @@
-<p>
-  join works!
-</p>
+
+<div class="container hvaglayout">
+    <div class="row" id="home">
+
+        <!--First column-->
+        <div class="col-lg-6">
+            <div class="description">
+                <h2 class="h2-responsive wow fadeInLeft">Join</h2>
+                <hr class="hr-dark">
+                <p class="wow fadeInLeft" data-wow-delay="0.4s">Register with HVAG to participate in member actvities.</p>
+                <br>
+                <a class="btn btn-blue-grey wow fadeInLeft" data-wow-delay="0.7s">Learn more</a>
+            </div>
+        </div>
+        <!--/.First column-->
+
+        <!--Second column-->
+        <div class="col-lg-6">
+            <!--Form-->
+            <div class="card wow fadeInRight">
+                <div class="card-block">
+                    <!--Header-->
+                    <div class="text-xs-center">
+                        <h3><i class="fa fa-user"></i> HVAG Registration:</h3>
+                        <a href="" class="btn-floating btn-fb btn-small"><i class="fa fa-facebook"></i></a>
+                        <a href="" class="btn-floating btn-tw btn-small"><i class="fa fa-twitter"></i></a>
+                        <a href="" class="btn-floating btn-gplus btn-small"><i class="fa fa-google-plus"></i></a>
+                        <a href="" class="btn-floating btn-li btn-small"><i class="fa fa-linkedin"></i></a>
+                        <a href="" class="btn-floating btn-git btn-small"><i class="fa fa-github"></i></a>
+                        <hr>
+                        <h3>or:</h3>
+                    </div>
+
+                    <!--Body-->
+                    <form [formGroup]="form" (ngSubmit)="onSubmit()" autocomplete="off">
+                        <div class="md-form">
+                            <i class="fa fa-envelope prefix"></i>
+                            <label for="email">Your email</label>
+                            <input type="email" id="email" class="form-control"
+                                formControlName="email">
+                            <div *ngIf="!form.controls['email'].valid" class="hvag-smallfont">
+                                A valid email is required
+                            </div>
+                        </div>
+
+                        <div class="md-form">
+                            <i class="fa fa-lock prefix"></i>
+                            <label for="password">Your password</label>
+                            <input type="password" id="password" class="form-control" 
+                                formControlName="password">
+                        </div>
+
+                        <div class="md-form">
+                            <i class="fa fa-lock prefix"></i>
+                            <label for="password">Confirm password</label>
+                            <input type="password" id="confirm" class="form-control" 
+                                formControlName="confirm">
+                        </div>
+
+                        <div class="text-xs-center">
+                            <button type="submit" class="btn btn-blue-grey btn-lg" [disabled]="!form.valid || !isPasswordMatch()">Join</button>
+                            <hr>
+                            <fieldset class="form-group">
+                                <label for="checkbox1">Subscribe me to the newsletter</label>
+                                <input type="checkbox" id="checkbox1"
+                                    formControlName="subscribe">
+                            </fieldset>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--/.Form-->
+        </div>
+        <!--/Second column-->
+
+    </div>
+</div>

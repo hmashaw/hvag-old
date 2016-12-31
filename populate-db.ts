@@ -30,5 +30,6 @@ const cRef = companyRef.push({
     card2_title: TC.card2_title,
     card2_text: TC.card2_text,
     card3_title: TC.card3_title,
-    card3_text: TC.card3_text
+    card3_text: TC.card3_text,
+    member_welcome: TC.member_welcome
 })

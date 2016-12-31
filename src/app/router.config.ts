@@ -1,5 +1,6 @@
 import { Route } from '@angular/router';
 
+import { AuthGuard } from './shared/security/auth.guard';
 import { MainComponent } from './components/main/main.component';
 import { AboutComponent } from './components/about/about.component';
 import { JoinComponent } from './components/common/join/join.component';
@@ -34,7 +35,8 @@ export const routerConfig: Route[] = [
 
     {
         path: 'member',
-        component: MemberComponent
+        component: MemberComponent,
+        canActivate: [AuthGuard]
     },
 
 

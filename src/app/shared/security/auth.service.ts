@@ -27,17 +27,27 @@ export class AuthService {
 
     /**
      * FirebaseAuth.lgin returns a promise.  We can use (return) Observable.fromPromise; however,
-     * this might not always work.  Lets go with work-around auxillary method
+     * this might not always work (Angular U).  Lets go with work-around auxillary method
      */
     login(email, password): Observable<any> {
         return this.fromFirebaseAuthPromise(this.auth.login({email, password}));
     }
 
 
+    join(email, password) {
+        return this.fromFirebaseAuthPromise(this.auth.createUser({email, password}));
+    }
+
+
+    logout() {
+        this.auth.logout();
+        this.authInfo$.next(AuthService.UNKNOWN_USER);
+    }
+
+
     /**
-     * 
      * @param {promise} promise
-     * @returns {subject} Observable
+     * @returns {Observable} Observable
      */
     fromFirebaseAuthPromise(promise): Observable<any> {
         const subject = new Subject<any>();

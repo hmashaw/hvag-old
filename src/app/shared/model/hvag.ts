@@ -14,5 +14,6 @@ export const THIS_COMPANY = {
     card2_title: 'Complimentary Cloud DC',
     card2_text: "*Free* - Deploy a Amazon Virtual Private Cloud (Amazon VPC) environment on Amazon Web Services (AWS).",
     card3_title: 'Process Improvement',
-    card3_text: "*Free* - Identify and improve the performance of one value stream.  Guidance on organizational changes."
+    card3_text: "*Free* - Identify and improve the performance of one value stream.  Guidance on organizational changes.",
+    member_welcome: "Welcome to the HVAG members resource area."
 }
