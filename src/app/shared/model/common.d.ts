@@ -14,3 +14,12 @@ export interface Entity {
     card3_title: string;
     card3_text: string;
 }
+
+
+export interface BlogItem {
+    title: string;
+    by: string;
+    on: Date;
+    body: string;
+    visible: boolean;
+}

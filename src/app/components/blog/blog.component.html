@@ -1,0 +1,33 @@
+<section class="container hvaglayout">
+    <div class="row">
+
+        <!--Main column-->
+        <div class="col-lg-8">
+            <h2 class="h2-responsive blog-header">HVAG Blog</h2>
+
+            <table>
+                <tbody>
+                    <tr *ngFor="let blog_entry of filteredBlogEntries$">
+                        <td>
+                            <br>
+                            <h3 class="h3-responsive blog_title">{{blog_entry.title}}</h3>
+                            <p class="blog_title_detail">by {{blog_entry.by}} | on {{blog_entry.on}}<p><br>
+                            <div [innerHTML]="blog_entry.body"></div>
+                            <br><br>
+                            <hr>
+                        </td>
+                    </tr>
+                <tbody>
+            </table>
+
+        </div>
+
+        <!--Sidebar-->
+        <div class="col-lg-4">
+            <p id="search">Search:</p>
+            <input type="search" (keyup)="search(input.value)" #input>
+        </div>
+        <br>
+
+    </div>
+</section>

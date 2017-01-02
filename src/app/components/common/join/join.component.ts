@@ -36,7 +36,6 @@ export class JoinComponent implements OnInit {
 
 
     isPasswordMatch() {
-
         const val = this.form.value;
         return val.password == val.confirm;
     }

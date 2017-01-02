@@ -21,9 +21,10 @@ import { HappeningComponent } from './components/main/happening/happening.compon
 import { ContactComponent } from './components/main/contact/contact.component';
 
 import { AboutComponent } from './components/about/about.component';
+import { MemberComponent } from './components/member/member.component';
+import { BlogComponent } from './components/blog/blog.component';
 import { SigninComponent } from './components/common/signin/signin.component';
 import { JoinComponent } from './components/common/join/join.component';
-import { MemberComponent } from './components/member/member.component';
 
 import { firebaseConfig, authConfig } from "../environments/firebase.config";
 import { routerConfig } from './router.config';
@@ -44,7 +45,8 @@ import 'rxjs/add/operator/do';
         ContactComponent,
         SigninComponent,
         JoinComponent,
-        MemberComponent
+        MemberComponent,
+        BlogComponent
     ],
     imports: [
         BrowserModule,

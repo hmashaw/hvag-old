@@ -1,0 +1,16 @@
+.blog-header {
+    color: orange;
+}
+
+.blog_title {
+    color: dodgerblue;
+}
+
+.blog_title_detail {
+    font-size: 80%;
+    color: gray;
+}
+
+#search {
+    color: gray;
+}

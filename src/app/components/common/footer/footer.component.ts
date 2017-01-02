@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { AuthService } from '../../../shared/security/auth.service';
+import { AuthInfo } from '../../../shared/security/auth-info';
+
 @Component({
     selector: 'hvag-footer',
     templateUrl: './footer.component.html',
@@ -8,8 +11,17 @@ import { Component, OnInit } from '@angular/core';
 
 export class FooterComponent implements OnInit {
 
-  constructor() {}
+    authInfo$: AuthInfo;
 
-  ngOnInit() {}
+    constructor(private authService: AuthService) {}
+
+    ngOnInit() {
+        this.authService.authInfo$.subscribe(authInfo => this.authInfo$ = authInfo);
+    }
+
+
+    signout() {
+        this.authService.logout()
+    }
 
 }

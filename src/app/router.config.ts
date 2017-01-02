@@ -3,6 +3,7 @@ import { Route } from '@angular/router';
 import { AuthGuard } from './shared/security/auth.guard';
 import { MainComponent } from './components/main/main.component';
 import { AboutComponent } from './components/about/about.component';
+import { BlogComponent } from './components/blog/blog.component';
 import { JoinComponent } from './components/common/join/join.component';
 import { SigninComponent } from './components/common/signin/signin.component';
 import { MemberComponent } from './components/member/member.component';
@@ -18,6 +19,12 @@ export const routerConfig: Route[] = [
     {
         path: 'about',
         component: AboutComponent
+    },
+
+
+        {
+        path: 'blog',
+        component: BlogComponent
     },
 
 
